@@ -6,6 +6,8 @@ services:
       - 80:5173
     volumes:
       - ./frontend/src:/app/src
+    environment:
+      VITE_API_URL: http://174.138.124.224:3000
   api:
     build: ./backend
     ports:
